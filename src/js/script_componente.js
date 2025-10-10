@@ -11,7 +11,7 @@ class AulasComponent extends HTMLElement {
   
     async loadData() {
       try {
-        const response = await fetch('aulas.json');
+        const response = await fetch('src/aulas.json');
         const aulas = await response.json();
         this.render(aulas);
       } catch (error) {
@@ -24,7 +24,7 @@ class AulasComponent extends HTMLElement {
   
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'styles_componente.css'; 
+      link.href = 'src/css/styles_componente.css'; 
       this.shadowRoot.appendChild(link); 
   
       this.shadowRoot.innerHTML += `
