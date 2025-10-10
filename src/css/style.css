@@ -31,6 +31,7 @@ header {
   left: 0px;
   top: 10px;
   margin-left: 15px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -147,6 +148,8 @@ header {
   font-size: 14pt;
   color: var(--cor-click)
   transition: 0.5s;
+  margin-right: 50%;
+  margin-bottom: 5px;
 }
 
 #componentes {
