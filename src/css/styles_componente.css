@@ -5,16 +5,23 @@
 }
 
 .titulo_aula {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
   font-weight: bold;
   font-size: 15px;
   padding: 0 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-style: normal;
+  color: var(--cor-text);
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .lables {
   display: flex;
+  /*justify-content: space-between;*/
 }
 
 .lable-prova,
@@ -30,16 +37,66 @@
 
 .lable-frequencia {
   background-color: var(--frequencia);
+  padding: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 10px;
+  border-radius: 500px;
 }
 
 .lable-nota {
-  background-color: var(--nota);
+  background-color: var(--prova);
+  padding: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 10px;
+  border-radius: 500px;
 }
 
 .p_lable {
-  font-size: 13px;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+  font-size: 11px;
   color: white;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.comp-aula {
+  position: relative;
+  background-color: white;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 15px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 11px;
+  color: var(--cor-text);
+  line-height: 1.5;
+  orphans: 3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.lable-prova {
+  background-color: var(--prova);
+  padding: 7px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 10px;
+  border-radius: 500px;
+  text-align: center;
 }
