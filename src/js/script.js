@@ -169,5 +169,3 @@ function resetAutoSlide() {
     autoSlideInterval = setInterval(nextCard, 5000);
 }
 
-
-

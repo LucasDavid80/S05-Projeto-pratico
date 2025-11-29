@@ -74,7 +74,7 @@ header {
   font-size: 17pt;
 }
 
-#mns_box {
+.mns_box {
   position: relative;
   top: 0px;
   left: 0px;
@@ -82,14 +82,14 @@ header {
   margin-top:5px;
 }
 
-#icon {
+.icon {
   width: 18px;
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
 }
 
-#mns {
+.mns {
   padding: 5px;
   width: 80%;
   display: inline-block;
@@ -136,7 +136,7 @@ header {
   border-radius: 10px;
 }
 
-#menu_bot {
+.menu_bot {
   position: relative;
   padding: 20px;
   display: "block";
