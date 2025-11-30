@@ -1,0 +1,228 @@
+/* --- RESET DE CONTAINER --- */
+#housing_container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+/* --- BARRA DE FILTROS --- */
+
+/* --- NOVO CONTAINER PAI --- */
+.filters-wrapper {
+  /* É aqui que o sticky deve ficar para segurar o bloco inteiro */
+  position: sticky;
+  top: 20px;
+  z-index: 20;
+
+  /* Garante que uma barra fique embaixo da outra */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre as linhas de filtros */
+
+  /* Cor de fundo para o texto não passar por trás dos filtros ao rolar */
+  /* background-color: #fff; */
+  padding-bottom: 10px; /* Um respiro visual embaixo */
+}
+
+/* --- SUA BARRA DE FILTROS ATUAL --- */
+.housing-filters-bar {
+  display: flex;
+  gap: 15px;
+  padding: 5px;
+
+  /* Rolagem horizontal para botões */
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+}
+
+/* --- BOTÃO DE FILTRO --- */
+button.housing-btn-filter {
+  appearance: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  color: #444;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estado Ativo */
+button.housing-btn-filter.is-selected {
+  background-color: #00559c;
+  color: white;
+  border-color: #00559c;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 85, 156, 0.3);
+}
+
+button.housing-btn-filter:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-1px);
+}
+
+button.housing-btn-filter.is-selected:hover {
+  background-color: #004480;
+}
+
+/* --- GRID DE CARDS --- */
+.cards_grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  /* Alterações sugeridas */
+  margin-top: 0; /* garante que a lista de cards não empurre a barra */
+}
+
+/* Se houver floats usados em mensagens/itens, limpar para evitar reflows */
+.housing-filters-bar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Alterações sugeridas */
+
+/* --- CARD DE IMÓVEL --- */
+.housing-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.housing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Cabeçalho do Card */
+.card-header {
+  background-color: #0066cc;
+  color: white;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header .material-symbols-outlined {
+  font-size: 20px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/* Corpo do Card */
+.card-body {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Imagem */
+.card-img {
+  width: 90px;
+  height: 90px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+/* Informações */
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.card-location {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Tags */
+.tags-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  background-color: #00559c;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tag-pill.green {
+  background-color: #28a745;
+}
+
+/* BOTÃO DETALHES */
+button.details-btn {
+  background: #f0f7ff;
+  border: none;
+  color: #00559c;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  padding: 0;
+  font-size: inherit;
+  /* Caso precise resetar algo herdado */
+  position: static;
+}
+
+button.details-btn:hover {
+  background: #dbeaff;
+}
